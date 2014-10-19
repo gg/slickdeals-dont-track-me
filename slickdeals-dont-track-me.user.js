@@ -9,7 +9,7 @@
 // ==/UserScript==
 
 (function() {
-  var getQueryStringParameters = function (url) {
+  var getQueryStringParams = function (url) {
     // See: http://stackoverflow.com/a/3855394
     return (function(a) {
         if (a == "") return {};
@@ -29,8 +29,8 @@
   var contentBody = document.getElementById('maincontent') || document.getElementById('posts');
   var aElements = contentBody.getElementsByTagName('a');
   for (var i = 0, a; a = aElements[i]; i++) {
-    var queryParamters = getQueryStringParameters(a.href);
-    var directUrl = queryParamters['u2'];
+    var queryParams = getQueryStringParams(a.href);
+    var directUrl = queryParams['u2'];
     if (directUrl) {
       a.href = directUrl;
       a.onclick = '';
