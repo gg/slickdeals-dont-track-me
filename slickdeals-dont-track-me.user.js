@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name       Slickdeals Don't Track Me!
-// @version    1.0
+// @version    1.1
 // @description  Replaces outgoing Slickdeals tracking links with direct links.
 // @match      http://slickdeals.net/f/*
 // @namespace https://github.com/gg/slickdeals-dont-track-me
@@ -26,7 +26,8 @@
     })((url.split('?')[1] || '').split('&'));
   };
 
-  var aElements = document.getElementById('maincontent').getElementsByTagName('a');
+  var contentBody = document.getElementById('maincontent') || document.getElementById('posts');
+  var aElements = contentBody.getElementsByTagName('a');
   for (var i = 0, a; a = aElements[i]; i++) {
     var queryParamters = getQueryStringParameters(a.href);
     var directUrl = queryParamters['u2'];
