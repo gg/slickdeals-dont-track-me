@@ -1,8 +1,9 @@
 // ==UserScript==
 // @name       Slickdeals Don't Track Me!
-// @version    1.1
+// @version    1.2
 // @description  Replaces outgoing Slickdeals tracking links with direct links.
 // @match      http://slickdeals.net/f/*
+// @match      https://slickdeals.net/f/*
 // @namespace https://github.com/gg/slickdeals-dont-track-me
 // @author    Gregg Gajic <https://github.com/gg>
 // @license    MIT
